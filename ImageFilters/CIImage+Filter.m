@@ -33,7 +33,7 @@
 #else
   CIContext *context = [CIContext contextWithOptions:@{kCIContextUseSoftwareRenderer: @NO}];
   cgImage = [context createCGImage:ciImage fromRect:extent];
-  image = [NGImage imageWithCGImage:cgImage scale:UIScreen.mainScreen.scale orientation:UIImageOrientationUp];
+  image = [NGImage imageWithCGImage:cgImage scale:1.0f orientation:UIImageOrientationUp];
   CGImageRelease(cgImage);
   
 #endif
